@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>California Housing Price Prediction</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+<style>
+  :root{
+    --bg: #f2f4f5;
+    --panel: #ffffff;
+    --border: #dde2e4;
+    --text: #232a2d;
+    --muted: #6b767b;
+    --teal: #1b4b66;
+    --gold: #8c8256;
+    --rust: #8b5e3c;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background: var(--bg); color: var(--text);
+    font-family:'Inter', sans-serif;
+    padding: 30px 34px 60px;
+  }
+  h1,h2{ font-family:'Lora', serif; margin:0; }
+  .num{ font-family:'JetBrains Mono', monospace; }
+
+  header{
+    border-bottom: 2px solid var(--teal);
+    padding-bottom: 18px;
+    margin-bottom: 24px;
+  }
+  header h1{ font-size:28px; font-weight:700; color: var(--teal); }
+  header p{ margin:6px 0 0; color: var(--muted); font-size:15px; }
+  .badge{
+    display:inline-block; margin-top:10px;
+    background:#eef2f0; border:1px solid #c8d3ce; color:#3d5347;
+    font-size:12px; padding:5px 10px; border-radius:3px;
+    font-family:'JetBrains Mono', monospace;
+  }
+
+  .metrics-row{
+    display:grid; grid-template-columns: repeat(4,1fr); gap:16px; margin-bottom:24px;
+  }
+  .metric{
+    background: var(--panel); border:1px solid var(--border); border-radius:6px;
+    padding:16px 18px;
+  }
+  .metric .label{ font-size:12.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em; margin-bottom:6px;}
+  .metric .value{ font-size:26px; font-weight:600; color: var(--teal); }
+
+  .grid{ display:grid; grid-template-columns: 1.3fr 1fr; gap:18px; margin-bottom:18px; }
+  .panel{
+    background: var(--panel); border:1px solid var(--border); border-radius:6px; padding:18px 20px;
+  }
+  .panel h2{ font-size:17px; margin-bottom:4px; }
+  .panel .desc{ font-size:13px; color:var(--muted); margin-bottom:14px; }
+  canvas{ max-height:300px; }
+
+  .region-table{ width:100%; border-collapse:collapse; font-size:14px; }
+  .region-table th{ text-align:left; font-size:11.5px; text-transform:uppercase; color:var(--muted); border-bottom:1px solid var(--border); padding-bottom:8px;}
+  .region-table td{ padding:9px 0; border-bottom:1px solid #edf0f1; }
+
+  footer{ margin-top:26px; color:var(--muted); font-size:12.5px; border-top:1px solid var(--border); padding-top:14px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>California Housing Price Prediction</h1>
+  <p>Random Forest regression on 1990 California census data — real dataset, real trained model</p>
+  <span class="badge">Real public data — not the deprecated Boston Housing dataset</span>
+</header>
+
+<div class="metrics-row" id="metricsRow"></div>
+
+<div class="grid">
+  <div class="panel">
+    <h2>Predicted vs. Actual</h2>
+    <div class="desc">Each point is one held-out test property. Points closer to the diagonal are more accurate predictions.</div>
+    <canvas id="scatterChart"></canvas>
+  </div>
+  <div class="panel">
+    <h2>Top Feature Importances</h2>
+    <div class="desc">What the model actually weighted most when predicting price.</div>
+    <canvas id="importanceChart"></canvas>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="panel">
+    <h2>Prediction Error Distribution</h2>
+    <div class="desc">Residuals (actual − predicted) across the test set, in dollars.</div>
+    <canvas id="residualChart"></canvas>
+  </div>
+  <div class="panel">
+    <h2>Average Value by Region Type</h2>
+    <table class="region-table">
+      <thead><tr><th>Region</th><th>Avg Value</th><th>Homes</th></tr></thead>
+      <tbody id="regionBody"></tbody>
+    </table>
+  </div>
+</div>
+
+<footer>
+  Dataset: California Housing Prices (1990 census) · Model: scikit-learn RandomForestRegressor · Built with Python (pandas, scikit-learn) + Chart.js · <span class="num">github.com/&lt;your-username&gt;/california-housing-dashboard</span>
+</footer>
+
+<script>
+Chart.defaults.color = '#6b767b';
+Chart.defaults.font.family = "'JetBrains Mono', monospace";
+Chart.defaults.font.size = 11;
+
+async function loadData(){ return (await fetch('model_results.json')).json(); }
+
+function fmtMoney(n){ return '$' + Math.round(n).toLocaleString(); }
+
+function renderMetrics(meta, metrics){
+  const items = [
+    { label: 'R² Score', value: metrics.r2_score.toFixed(3) },
+    { label: 'Mean Abs. Error', value: fmtMoney(metrics.mae_dollars) },
+    { label: 'Test Set Size', value: meta.n_test.toLocaleString() },
+    { label: 'Total Records', value: meta.n_rows.toLocaleString() },
+  ];
+  document.getElementById('metricsRow').innerHTML = items.map(i=>`
+    <div class="metric"><div class="label">${i.label}</div><div class="value num">${i.value}</div></div>
+  `).join('');
+}
+
+function renderScatter(points){
+  const maxVal = Math.max(...points.map(p=>Math.max(p.actual,p.predicted)));
+  new Chart(document.getElementById('scatterChart'), {
+    type: 'scatter',
+    data: {
+      datasets: [
+        { label:'Predictions', data: points.map(p=>({x:p.actual,y:p.predicted})), backgroundColor:'rgba(27,75,102,0.45)', pointRadius:3 },
+        { label:'Perfect prediction', data:[{x:0,y:0},{x:maxVal,y:maxVal}], type:'line', borderColor:'#8b5e3c', borderDash:[5,4], pointRadius:0, borderWidth:1.5 }
+      ]
+    },
+    options: {
+      responsive:true, maintainAspectRatio:false,
+      scales: {
+        x: { title:{display:true,text:'Actual value ($)'}, grid:{color:'#eceff0'} },
+        y: { title:{display:true,text:'Predicted value ($)'}, grid:{color:'#eceff0'} }
+      },
+      plugins: { legend: { labels:{ color:'#6b767b' } } }
+    }
+  });
+}
+
+function renderImportance(feats){
+  const top = feats.slice(0,8).reverse();
+  new Chart(document.getElementById('importanceChart'), {
+    type:'bar',
+    data:{ labels: top.map(f=>f.feature), datasets:[{ data: top.map(f=>f.importance), backgroundColor:'#1b4b66' }] },
+    options:{
+      indexAxis:'y', responsive:true, maintainAspectRatio:false,
+      scales:{ x:{ grid:{color:'#eceff0'} }, y:{ grid:{display:false} } },
+      plugins:{ legend:{ display:false } }
+    }
+  });
+}
+
+function renderResiduals(bins){
+  new Chart(document.getElementById('residualChart'), {
+    type:'bar',
+    data:{ labels: bins.map(b=>b.range), datasets:[{ data: bins.map(b=>b.count), backgroundColor:'#8c8256' }] },
+    options:{
+      responsive:true, maintainAspectRatio:false,
+      scales:{ x:{ ticks:{ maxRotation:60, minRotation:60, font:{size:9} }, grid:{display:false} }, y:{ grid:{color:'#eceff0'} } },
+      plugins:{ legend:{ display:false } }
+    }
+  });
+}
+
+function renderRegionTable(regions){
+  document.getElementById('regionBody').innerHTML = regions.map(r=>`
+    <tr><td>${r.region}</td><td class="num">${fmtMoney(r.avg_value)}</td><td class="num">${r.count.toLocaleString()}</td></tr>
+  `).join('');
+}
+
+loadData().then(d=>{
+  renderMetrics(d.meta, d.metrics);
+  renderScatter(d.scatter_sample);
+  renderImportance(d.feature_importance);
+  renderResiduals(d.residual_bins);
+  renderRegionTable(d.region_breakdown);
+}).catch(err=>{
+  document.body.innerHTML = '<p style="padding:40px;font-family:monospace;color:#8b5e3c;">Could not load model_results.json — serve this folder with a local server (not file://) and make sure model_results.json is present.</p>';
+  console.error(err);
+});
+</script>
+</body>
+</html>

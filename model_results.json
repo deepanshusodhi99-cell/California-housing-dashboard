@@ -1,0 +1,2167 @@
+{
+  "meta": {
+    "dataset": "California Housing Prices (1990 census) via Aurelien Geron's Hands-On Machine Learning repo",
+    "note": "Real public dataset and a real trained model. Metrics below are genuine model output.",
+    "n_rows": 20433,
+    "n_train": 16346,
+    "n_test": 4087,
+    "model": "RandomForestRegressor (n_estimators=200, max_depth=14) in a scikit-learn Pipeline with one-hot encoding"
+  },
+  "metrics": {
+    "r2_score": 0.8171,
+    "mae_dollars": 32889.0
+  },
+  "feature_importance": [
+    {
+      "feature": "median_income",
+      "importance": 0.5034
+    },
+    {
+      "feature": "ocean_proximity_INLAND",
+      "importance": 0.1501
+    },
+    {
+      "feature": "longitude",
+      "importance": 0.1074
+    },
+    {
+      "feature": "latitude",
+      "importance": 0.1021
+    },
+    {
+      "feature": "housing_median_age",
+      "importance": 0.0465
+    },
+    {
+      "feature": "population",
+      "importance": 0.0273
+    },
+    {
+      "feature": "total_rooms",
+      "importance": 0.0192
+    },
+    {
+      "feature": "total_bedrooms",
+      "importance": 0.0182
+    },
+    {
+      "feature": "households",
+      "importance": 0.0154
+    },
+    {
+      "feature": "ocean_proximity_NEAR OCEAN",
+      "importance": 0.0057
+    }
+  ],
+  "scatter_sample": [
+    {
+      "actual": 216100.0,
+      "predicted": 141733.0
+    },
+    {
+      "actual": 413900.0,
+      "predicted": 320893.0
+    },
+    {
+      "actual": 54400.0,
+      "predicted": 70785.0
+    },
+    {
+      "actual": 221800.0,
+      "predicted": 225082.0
+    },
+    {
+      "actual": 161900.0,
+      "predicted": 204822.0
+    },
+    {
+      "actual": 187200.0,
+      "predicted": 182753.0
+    },
+    {
+      "actual": 52500.0,
+      "predicted": 55040.0
+    },
+    {
+      "actual": 500001.0,
+      "predicted": 414635.0
+    },
+    {
+      "actual": 178600.0,
+      "predicted": 228503.0
+    },
+    {
+      "actual": 390100.0,
+      "predicted": 422482.0
+    },
+    {
+      "actual": 163700.0,
+      "predicted": 141439.0
+    },
+    {
+      "actual": 277600.0,
+      "predicted": 300852.0
+    },
+    {
+      "actual": 176200.0,
+      "predicted": 186214.0
+    },
+    {
+      "actual": 364000.0,
+      "predicted": 257631.0
+    },
+    {
+      "actual": 126800.0,
+      "predicted": 114836.0
+    },
+    {
+      "actual": 97400.0,
+      "predicted": 137929.0
+    },
+    {
+      "actual": 67500.0,
+      "predicted": 87870.0
+    },
+    {
+      "actual": 186500.0,
+      "predicted": 159806.0
+    },
+    {
+      "actual": 169200.0,
+      "predicted": 175789.0
+    },
+    {
+      "actual": 281700.0,
+      "predicted": 257028.0
+    },
+    {
+      "actual": 184400.0,
+      "predicted": 151633.0
+    },
+    {
+      "actual": 312500.0,
+      "predicted": 217366.0
+    },
+    {
+      "actual": 248100.0,
+      "predicted": 118609.0
+    },
+    {
+      "actual": 219500.0,
+      "predicted": 262595.0
+    },
+    {
+      "actual": 225000.0,
+      "predicted": 192111.0
+    },
+    {
+      "actual": 193300.0,
+      "predicted": 309969.0
+    },
+    {
+      "actual": 213100.0,
+      "predicted": 213270.0
+    },
+    {
+      "actual": 285500.0,
+      "predicted": 196165.0
+    },
+    {
+      "actual": 345300.0,
+      "predicted": 314202.0
+    },
+    {
+      "actual": 350000.0,
+      "predicted": 196518.0
+    },
+    {
+      "actual": 485700.0,
+      "predicted": 349446.0
+    },
+    {
+      "actual": 203400.0,
+      "predicted": 216713.0
+    },
+    {
+      "actual": 201200.0,
+      "predicted": 135800.0
+    },
+    {
+      "actual": 93600.0,
+      "predicted": 104159.0
+    },
+    {
+      "actual": 286100.0,
+      "predicted": 258523.0
+    },
+    {
+      "actual": 46900.0,
+      "predicted": 113912.0
+    },
+    {
+      "actual": 213200.0,
+      "predicted": 190471.0
+    },
+    {
+      "actual": 107900.0,
+      "predicted": 144614.0
+    },
+    {
+      "actual": 106600.0,
+      "predicted": 101414.0
+    },
+    {
+      "actual": 236700.0,
+      "predicted": 290426.0
+    },
+    {
+      "actual": 78400.0,
+      "predicted": 94332.0
+    },
+    {
+      "actual": 500001.0,
+      "predicted": 492087.0
+    },
+    {
+      "actual": 149000.0,
+      "predicted": 153923.0
+    },
+    {
+      "actual": 87900.0,
+      "predicted": 114437.0
+    },
+    {
+      "actual": 500001.0,
+      "predicted": 494680.0
+    },
+    {
+      "actual": 78300.0,
+      "predicted": 76124.0
+    },
+    {
+      "actual": 107000.0,
+      "predicted": 134889.0
+    },
+    {
+      "actual": 196900.0,
+      "predicted": 183944.0
+    },
+    {
+      "actual": 103100.0,
+      "predicted": 120961.0
+    },
+    {
+      "actual": 124100.0,
+      "predicted": 121223.0
+    },
+    {
+      "actual": 100000.0,
+      "predicted": 99873.0
+    },
+    {
+      "actual": 312400.0,
+      "predicted": 215110.0
+    },
+    {
+      "actual": 142900.0,
+      "predicted": 187407.0
+    },
+    {
+      "actual": 134700.0,
+      "predicted": 121913.0
+    },
+    {
+      "actual": 474000.0,
+      "predicted": 403773.0
+    },
+    {
+      "actual": 90900.0,
+      "predicted": 117996.0
+    },
+    {
+      "actual": 300900.0,
+      "predicted": 376024.0
+    },
+    {
+      "actual": 165900.0,
+      "predicted": 184053.0
+    },
+    {
+      "actual": 215000.0,
+      "predicted": 208817.0
+    },
+    {
+      "actual": 112900.0,
+      "predicted": 120789.0
+    },
+    {
+      "actual": 113900.0,
+      "predicted": 107779.0
+    },
+    {
+      "actual": 177900.0,
+      "predicted": 116983.0
+    },
+    {
+      "actual": 53200.0,
+      "predicted": 75678.0
+    },
+    {
+      "actual": 104400.0,
+      "predicted": 100424.0
+    },
+    {
+      "actual": 214000.0,
+      "predicted": 226892.0
+    },
+    {
+      "actual": 197500.0,
+      "predicted": 182520.0
+    },
+    {
+      "actual": 152500.0,
+      "predicted": 144655.0
+    },
+    {
+      "actual": 79200.0,
+      "predicted": 94988.0
+    },
+    {
+      "actual": 139700.0,
+      "predicted": 96280.0
+    },
+    {
+      "actual": 500001.0,
+      "predicted": 443054.0
+    },
+    {
+      "actual": 239900.0,
+      "predicted": 190569.0
+    },
+    {
+      "actual": 201800.0,
+      "predicted": 136151.0
+    },
+    {
+      "actual": 114000.0,
+      "predicted": 194289.0
+    },
+    {
+      "actual": 80000.0,
+      "predicted": 173989.0
+    },
+    {
+      "actual": 84800.0,
+      "predicted": 101584.0
+    },
+    {
+      "actual": 319000.0,
+      "predicted": 223875.0
+    },
+    {
+      "actual": 139100.0,
+      "predicted": 126193.0
+    },
+    {
+      "actual": 238200.0,
+      "predicted": 227755.0
+    },
+    {
+      "actual": 113800.0,
+      "predicted": 142451.0
+    },
+    {
+      "actual": 110700.0,
+      "predicted": 116504.0
+    },
+    {
+      "actual": 218200.0,
+      "predicted": 204379.0
+    },
+    {
+      "actual": 193200.0,
+      "predicted": 198288.0
+    },
+    {
+      "actual": 82800.0,
+      "predicted": 93797.0
+    },
+    {
+      "actual": 334300.0,
+      "predicted": 243379.0
+    },
+    {
+      "actual": 389500.0,
+      "predicted": 347436.0
+    },
+    {
+      "actual": 158300.0,
+      "predicted": 132621.0
+    },
+    {
+      "actual": 500001.0,
+      "predicted": 474944.0
+    },
+    {
+      "actual": 83500.0,
+      "predicted": 96550.0
+    },
+    {
+      "actual": 207800.0,
+      "predicted": 234364.0
+    },
+    {
+      "actual": 161500.0,
+      "predicted": 227787.0
+    },
+    {
+      "actual": 500001.0,
+      "predicted": 482428.0
+    },
+    {
+      "actual": 162500.0,
+      "predicted": 177858.0
+    },
+    {
+      "actual": 58000.0,
+      "predicted": 62770.0
+    },
+    {
+      "actual": 276800.0,
+      "predicted": 186222.0
+    },
+    {
+      "actual": 125500.0,
+      "predicted": 168304.0
+    },
+    {
+      "actual": 190700.0,
+      "predicted": 126398.0
+    },
+    {
+      "actual": 124900.0,
+      "predicted": 151966.0
+    },
+    {
+      "actual": 261000.0,
+      "predicted": 269036.0
+    },
+    {
+      "actual": 65200.0,
+      "predicted": 73294.0
+    },
+    {
+      "actual": 112500.0,
+      "predicted": 105514.0
+    },
+    {
+      "actual": 500001.0,
+      "predicted": 500001.0
+    },
+    {
+      "actual": 201700.0,
+      "predicted": 202975.0
+    },
+    {
+      "actual": 204000.0,
+      "predicted": 343987.0
+    },
+    {
+      "actual": 63300.0,
+      "predicted": 75926.0
+    },
+    {
+      "actual": 96900.0,
+      "predicted": 103074.0
+    },
+    {
+      "actual": 500001.0,
+      "predicted": 185263.0
+    },
+    {
+      "actual": 114300.0,
+      "predicted": 139374.0
+    },
+    {
+      "actual": 156500.0,
+      "predicted": 114366.0
+    },
+    {
+      "actual": 357400.0,
+      "predicted": 226461.0
+    },
+    {
+      "actual": 75900.0,
+      "predicted": 101280.0
+    },
+    {
+      "actual": 70400.0,
+      "predicted": 75697.0
+    },
+    {
+      "actual": 365600.0,
+      "predicted": 314661.0
+    },
+    {
+      "actual": 200000.0,
+      "predicted": 137060.0
+    },
+    {
+      "actual": 204200.0,
+      "predicted": 200725.0
+    },
+    {
+      "actual": 90200.0,
+      "predicted": 151103.0
+    },
+    {
+      "actual": 233700.0,
+      "predicted": 291878.0
+    },
+    {
+      "actual": 163500.0,
+      "predicted": 223497.0
+    },
+    {
+      "actual": 190400.0,
+      "predicted": 169096.0
+    },
+    {
+      "actual": 222500.0,
+      "predicted": 243522.0
+    },
+    {
+      "actual": 97500.0,
+      "predicted": 129806.0
+    },
+    {
+      "actual": 111100.0,
+      "predicted": 103153.0
+    },
+    {
+      "actual": 224400.0,
+      "predicted": 307054.0
+    },
+    {
+      "actual": 386400.0,
+      "predicted": 261613.0
+    },
+    {
+      "actual": 142000.0,
+      "predicted": 137293.0
+    },
+    {
+      "actual": 93400.0,
+      "predicted": 122456.0
+    },
+    {
+      "actual": 106200.0,
+      "predicted": 127927.0
+    },
+    {
+      "actual": 170700.0,
+      "predicted": 175125.0
+    },
+    {
+      "actual": 294500.0,
+      "predicted": 257550.0
+    },
+    {
+      "actual": 327100.0,
+      "predicted": 341668.0
+    },
+    {
+      "actual": 200000.0,
+      "predicted": 219900.0
+    },
+    {
+      "actual": 122600.0,
+      "predicted": 109803.0
+    },
+    {
+      "actual": 137300.0,
+      "predicted": 236681.0
+    },
+    {
+      "actual": 228100.0,
+      "predicted": 152752.0
+    },
+    {
+      "actual": 331000.0,
+      "predicted": 329933.0
+    },
+    {
+      "actual": 210400.0,
+      "predicted": 250536.0
+    },
+    {
+      "actual": 243200.0,
+      "predicted": 273099.0
+    },
+    {
+      "actual": 208300.0,
+      "predicted": 188961.0
+    },
+    {
+      "actual": 188800.0,
+      "predicted": 190025.0
+    },
+    {
+      "actual": 321300.0,
+      "predicted": 360143.0
+    },
+    {
+      "actual": 129700.0,
+      "predicted": 129703.0
+    },
+    {
+      "actual": 59800.0,
+      "predicted": 70764.0
+    },
+    {
+      "actual": 171300.0,
+      "predicted": 136238.0
+    },
+    {
+      "actual": 106300.0,
+      "predicted": 125458.0
+    },
+    {
+      "actual": 226300.0,
+      "predicted": 320786.0
+    },
+    {
+      "actual": 163400.0,
+      "predicted": 173500.0
+    },
+    {
+      "actual": 500001.0,
+      "predicted": 225486.0
+    },
+    {
+      "actual": 204100.0,
+      "predicted": 226758.0
+    },
+    {
+      "actual": 409600.0,
+      "predicted": 445035.0
+    },
+    {
+      "actual": 210900.0,
+      "predicted": 246280.0
+    },
+    {
+      "actual": 209900.0,
+      "predicted": 225111.0
+    },
+    {
+      "actual": 131000.0,
+      "predicted": 134097.0
+    },
+    {
+      "actual": 59500.0,
+      "predicted": 68958.0
+    },
+    {
+      "actual": 187200.0,
+      "predicted": 187526.0
+    },
+    {
+      "actual": 284800.0,
+      "predicted": 254146.0
+    },
+    {
+      "actual": 248000.0,
+      "predicted": 242072.0
+    },
+    {
+      "actual": 364200.0,
+      "predicted": 237288.0
+    },
+    {
+      "actual": 137500.0,
+      "predicted": 153228.0
+    },
+    {
+      "actual": 93800.0,
+      "predicted": 96867.0
+    },
+    {
+      "actual": 170800.0,
+      "predicted": 189464.0
+    },
+    {
+      "actual": 486800.0,
+      "predicted": 255020.0
+    },
+    {
+      "actual": 165000.0,
+      "predicted": 161294.0
+    },
+    {
+      "actual": 148800.0,
+      "predicted": 173274.0
+    },
+    {
+      "actual": 225000.0,
+      "predicted": 198217.0
+    },
+    {
+      "actual": 78800.0,
+      "predicted": 70301.0
+    },
+    {
+      "actual": 231900.0,
+      "predicted": 273229.0
+    },
+    {
+      "actual": 181800.0,
+      "predicted": 192245.0
+    },
+    {
+      "actual": 207100.0,
+      "predicted": 180681.0
+    },
+    {
+      "actual": 239700.0,
+      "predicted": 205781.0
+    },
+    {
+      "actual": 192900.0,
+      "predicted": 250139.0
+    },
+    {
+      "actual": 53500.0,
+      "predicted": 69583.0
+    },
+    {
+      "actual": 133900.0,
+      "predicted": 125404.0
+    },
+    {
+      "actual": 56700.0,
+      "predicted": 110881.0
+    },
+    {
+      "actual": 452600.0,
+      "predicted": 448241.0
+    },
+    {
+      "actual": 242600.0,
+      "predicted": 214949.0
+    },
+    {
+      "actual": 335000.0,
+      "predicted": 285286.0
+    },
+    {
+      "actual": 54200.0,
+      "predicted": 65125.0
+    },
+    {
+      "actual": 218200.0,
+      "predicted": 218437.0
+    },
+    {
+      "actual": 135400.0,
+      "predicted": 182568.0
+    },
+    {
+      "actual": 240600.0,
+      "predicted": 281465.0
+    },
+    {
+      "actual": 131300.0,
+      "predicted": 189326.0
+    },
+    {
+      "actual": 109100.0,
+      "predicted": 98628.0
+    },
+    {
+      "actual": 112000.0,
+      "predicted": 126626.0
+    },
+    {
+      "actual": 336000.0,
+      "predicted": 220519.0
+    },
+    {
+      "actual": 136800.0,
+      "predicted": 137058.0
+    },
+    {
+      "actual": 358600.0,
+      "predicted": 353677.0
+    },
+    {
+      "actual": 229800.0,
+      "predicted": 201607.0
+    },
+    {
+      "actual": 173800.0,
+      "predicted": 177680.0
+    },
+    {
+      "actual": 58000.0,
+      "predicted": 94612.0
+    },
+    {
+      "actual": 110400.0,
+      "predicted": 140690.0
+    },
+    {
+      "actual": 346200.0,
+      "predicted": 320318.0
+    },
+    {
+      "actual": 140400.0,
+      "predicted": 121867.0
+    },
+    {
+      "actual": 132700.0,
+      "predicted": 141069.0
+    },
+    {
+      "actual": 500001.0,
+      "predicted": 500001.0
+    },
+    {
+      "actual": 86300.0,
+      "predicted": 150978.0
+    },
+    {
+      "actual": 58600.0,
+      "predicted": 57303.0
+    },
+    {
+      "actual": 369100.0,
+      "predicted": 377846.0
+    },
+    {
+      "actual": 265000.0,
+      "predicted": 239142.0
+    },
+    {
+      "actual": 86300.0,
+      "predicted": 119709.0
+    },
+    {
+      "actual": 159800.0,
+      "predicted": 143349.0
+    },
+    {
+      "actual": 500001.0,
+      "predicted": 365722.0
+    },
+    {
+      "actual": 311200.0,
+      "predicted": 310490.0
+    },
+    {
+      "actual": 112500.0,
+      "predicted": 116312.0
+    },
+    {
+      "actual": 183300.0,
+      "predicted": 168128.0
+    },
+    {
+      "actual": 180400.0,
+      "predicted": 189416.0
+    },
+    {
+      "actual": 128600.0,
+      "predicted": 136018.0
+    },
+    {
+      "actual": 158300.0,
+      "predicted": 128453.0
+    },
+    {
+      "actual": 375000.0,
+      "predicted": 412842.0
+    },
+    {
+      "actual": 341800.0,
+      "predicted": 349322.0
+    },
+    {
+      "actual": 90100.0,
+      "predicted": 104297.0
+    },
+    {
+      "actual": 147600.0,
+      "predicted": 185004.0
+    },
+    {
+      "actual": 155600.0,
+      "predicted": 168941.0
+    },
+    {
+      "actual": 158200.0,
+      "predicted": 153371.0
+    },
+    {
+      "actual": 165900.0,
+      "predicted": 235095.0
+    },
+    {
+      "actual": 291500.0,
+      "predicted": 322296.0
+    },
+    {
+      "actual": 245300.0,
+      "predicted": 198787.0
+    },
+    {
+      "actual": 89500.0,
+      "predicted": 110894.0
+    },
+    {
+      "actual": 93800.0,
+      "predicted": 113417.0
+    },
+    {
+      "actual": 137500.0,
+      "predicted": 165273.0
+    },
+    {
+      "actual": 165800.0,
+      "predicted": 171614.0
+    },
+    {
+      "actual": 285800.0,
+      "predicted": 252186.0
+    },
+    {
+      "actual": 127300.0,
+      "predicted": 158917.0
+    },
+    {
+      "actual": 261500.0,
+      "predicted": 240879.0
+    },
+    {
+      "actual": 197500.0,
+      "predicted": 156041.0
+    },
+    {
+      "actual": 150000.0,
+      "predicted": 138774.0
+    },
+    {
+      "actual": 387000.0,
+      "predicted": 172563.0
+    },
+    {
+      "actual": 457300.0,
+      "predicted": 363642.0
+    },
+    {
+      "actual": 229200.0,
+      "predicted": 331490.0
+    },
+    {
+      "actual": 183100.0,
+      "predicted": 220180.0
+    },
+    {
+      "actual": 500001.0,
+      "predicted": 500001.0
+    },
+    {
+      "actual": 149300.0,
+      "predicted": 201083.0
+    },
+    {
+      "actual": 257600.0,
+      "predicted": 300794.0
+    },
+    {
+      "actual": 178200.0,
+      "predicted": 213361.0
+    },
+    {
+      "actual": 157500.0,
+      "predicted": 183370.0
+    },
+    {
+      "actual": 111800.0,
+      "predicted": 111611.0
+    },
+    {
+      "actual": 109500.0,
+      "predicted": 214149.0
+    },
+    {
+      "actual": 281300.0,
+      "predicted": 202592.0
+    },
+    {
+      "actual": 57800.0,
+      "predicted": 82388.0
+    },
+    {
+      "actual": 114200.0,
+      "predicted": 162056.0
+    },
+    {
+      "actual": 161800.0,
+      "predicted": 166207.0
+    },
+    {
+      "actual": 97200.0,
+      "predicted": 102806.0
+    },
+    {
+      "actual": 410400.0,
+      "predicted": 413743.0
+    },
+    {
+      "actual": 214500.0,
+      "predicted": 198871.0
+    },
+    {
+      "actual": 361300.0,
+      "predicted": 370559.0
+    },
+    {
+      "actual": 500001.0,
+      "predicted": 484226.0
+    },
+    {
+      "actual": 139200.0,
+      "predicted": 177132.0
+    },
+    {
+      "actual": 161800.0,
+      "predicted": 190756.0
+    },
+    {
+      "actual": 161700.0,
+      "predicted": 150418.0
+    },
+    {
+      "actual": 188800.0,
+      "predicted": 256678.0
+    },
+    {
+      "actual": 170800.0,
+      "predicted": 179649.0
+    },
+    {
+      "actual": 84300.0,
+      "predicted": 106079.0
+    },
+    {
+      "actual": 68900.0,
+      "predicted": 71044.0
+    },
+    {
+      "actual": 405500.0,
+      "predicted": 331225.0
+    },
+    {
+      "actual": 125000.0,
+      "predicted": 117098.0
+    },
+    {
+      "actual": 422000.0,
+      "predicted": 360684.0
+    },
+    {
+      "actual": 239200.0,
+      "predicted": 239630.0
+    },
+    {
+      "actual": 153000.0,
+      "predicted": 128392.0
+    },
+    {
+      "actual": 103100.0,
+      "predicted": 123758.0
+    },
+    {
+      "actual": 237000.0,
+      "predicted": 218101.0
+    },
+    {
+      "actual": 200900.0,
+      "predicted": 239312.0
+    },
+    {
+      "actual": 150300.0,
+      "predicted": 175781.0
+    },
+    {
+      "actual": 131000.0,
+      "predicted": 165739.0
+    },
+    {
+      "actual": 102600.0,
+      "predicted": 123569.0
+    },
+    {
+      "actual": 146800.0,
+      "predicted": 157234.0
+    },
+    {
+      "actual": 135600.0,
+      "predicted": 148272.0
+    },
+    {
+      "actual": 51300.0,
+      "predicted": 66826.0
+    },
+    {
+      "actual": 139300.0,
+      "predicted": 135395.0
+    },
+    {
+      "actual": 254600.0,
+      "predicted": 223123.0
+    },
+    {
+      "actual": 190900.0,
+      "predicted": 236107.0
+    },
+    {
+      "actual": 147100.0,
+      "predicted": 172150.0
+    },
+    {
+      "actual": 78000.0,
+      "predicted": 100790.0
+    },
+    {
+      "actual": 312500.0,
+      "predicted": 231590.0
+    },
+    {
+      "actual": 116600.0,
+      "predicted": 106957.0
+    },
+    {
+      "actual": 112200.0,
+      "predicted": 114901.0
+    },
+    {
+      "actual": 87900.0,
+      "predicted": 92596.0
+    },
+    {
+      "actual": 156500.0,
+      "predicted": 125115.0
+    },
+    {
+      "actual": 122600.0,
+      "predicted": 117263.0
+    },
+    {
+      "actual": 171900.0,
+      "predicted": 146161.0
+    },
+    {
+      "actual": 92000.0,
+      "predicted": 148092.0
+    },
+    {
+      "actual": 165800.0,
+      "predicted": 177681.0
+    },
+    {
+      "actual": 254500.0,
+      "predicted": 201760.0
+    },
+    {
+      "actual": 53100.0,
+      "predicted": 53766.0
+    },
+    {
+      "actual": 500001.0,
+      "predicted": 495204.0
+    },
+    {
+      "actual": 73100.0,
+      "predicted": 114839.0
+    },
+    {
+      "actual": 290500.0,
+      "predicted": 201872.0
+    },
+    {
+      "actual": 108000.0,
+      "predicted": 117663.0
+    },
+    {
+      "actual": 110300.0,
+      "predicted": 149893.0
+    },
+    {
+      "actual": 174800.0,
+      "predicted": 242358.0
+    },
+    {
+      "actual": 500001.0,
+      "predicted": 500001.0
+    },
+    {
+      "actual": 162500.0,
+      "predicted": 162530.0
+    },
+    {
+      "actual": 196100.0,
+      "predicted": 185849.0
+    },
+    {
+      "actual": 47100.0,
+      "predicted": 62765.0
+    },
+    {
+      "actual": 52600.0,
+      "predicted": 63781.0
+    },
+    {
+      "actual": 132200.0,
+      "predicted": 146547.0
+    },
+    {
+      "actual": 442700.0,
+      "predicted": 304913.0
+    },
+    {
+      "actual": 155100.0,
+      "predicted": 142113.0
+    },
+    {
+      "actual": 49800.0,
+      "predicted": 56583.0
+    },
+    {
+      "actual": 221500.0,
+      "predicted": 258747.0
+    },
+    {
+      "actual": 178000.0,
+      "predicted": 186598.0
+    },
+    {
+      "actual": 282100.0,
+      "predicted": 246217.0
+    },
+    {
+      "actual": 77700.0,
+      "predicted": 108780.0
+    },
+    {
+      "actual": 96700.0,
+      "predicted": 116160.0
+    },
+    {
+      "actual": 203600.0,
+      "predicted": 179732.0
+    },
+    {
+      "actual": 339700.0,
+      "predicted": 319974.0
+    },
+    {
+      "actual": 258000.0,
+      "predicted": 193276.0
+    },
+    {
+      "actual": 220500.0,
+      "predicted": 203270.0
+    },
+    {
+      "actual": 146100.0,
+      "predicted": 116704.0
+    },
+    {
+      "actual": 159400.0,
+      "predicted": 175976.0
+    },
+    {
+      "actual": 94500.0,
+      "predicted": 98148.0
+    },
+    {
+      "actual": 314300.0,
+      "predicted": 341478.0
+    },
+    {
+      "actual": 65400.0,
+      "predicted": 75622.0
+    },
+    {
+      "actual": 135900.0,
+      "predicted": 116345.0
+    },
+    {
+      "actual": 498700.0,
+      "predicted": 478004.0
+    },
+    {
+      "actual": 157600.0,
+      "predicted": 140807.0
+    },
+    {
+      "actual": 62800.0,
+      "predicted": 86675.0
+    },
+    {
+      "actual": 136600.0,
+      "predicted": 102902.0
+    },
+    {
+      "actual": 72500.0,
+      "predicted": 70741.0
+    },
+    {
+      "actual": 103000.0,
+      "predicted": 88316.0
+    },
+    {
+      "actual": 495500.0,
+      "predicted": 374309.0
+    },
+    {
+      "actual": 219900.0,
+      "predicted": 211667.0
+    },
+    {
+      "actual": 167800.0,
+      "predicted": 228737.0
+    },
+    {
+      "actual": 287600.0,
+      "predicted": 264492.0
+    },
+    {
+      "actual": 118200.0,
+      "predicted": 116135.0
+    },
+    {
+      "actual": 155000.0,
+      "predicted": 228966.0
+    },
+    {
+      "actual": 239600.0,
+      "predicted": 271290.0
+    },
+    {
+      "actual": 116000.0,
+      "predicted": 101319.0
+    },
+    {
+      "actual": 284100.0,
+      "predicted": 331143.0
+    },
+    {
+      "actual": 101200.0,
+      "predicted": 113513.0
+    },
+    {
+      "actual": 111000.0,
+      "predicted": 175524.0
+    },
+    {
+      "actual": 212400.0,
+      "predicted": 243214.0
+    },
+    {
+      "actual": 159600.0,
+      "predicted": 151917.0
+    },
+    {
+      "actual": 113700.0,
+      "predicted": 79263.0
+    },
+    {
+      "actual": 500001.0,
+      "predicted": 438703.0
+    },
+    {
+      "actual": 53600.0,
+      "predicted": 50839.0
+    },
+    {
+      "actual": 78800.0,
+      "predicted": 68655.0
+    },
+    {
+      "actual": 126400.0,
+      "predicted": 83158.0
+    },
+    {
+      "actual": 227700.0,
+      "predicted": 195564.0
+    },
+    {
+      "actual": 178900.0,
+      "predicted": 266152.0
+    },
+    {
+      "actual": 169300.0,
+      "predicted": 190286.0
+    },
+    {
+      "actual": 137500.0,
+      "predicted": 170595.0
+    },
+    {
+      "actual": 337500.0,
+      "predicted": 379225.0
+    },
+    {
+      "actual": 227900.0,
+      "predicted": 258127.0
+    },
+    {
+      "actual": 155500.0,
+      "predicted": 178074.0
+    },
+    {
+      "actual": 208700.0,
+      "predicted": 197070.0
+    },
+    {
+      "actual": 160900.0,
+      "predicted": 188732.0
+    },
+    {
+      "actual": 500001.0,
+      "predicted": 327138.0
+    },
+    {
+      "actual": 334400.0,
+      "predicted": 320001.0
+    },
+    {
+      "actual": 269100.0,
+      "predicted": 266963.0
+    },
+    {
+      "actual": 162800.0,
+      "predicted": 152021.0
+    },
+    {
+      "actual": 160100.0,
+      "predicted": 179731.0
+    },
+    {
+      "actual": 120400.0,
+      "predicted": 125910.0
+    },
+    {
+      "actual": 238000.0,
+      "predicted": 247792.0
+    },
+    {
+      "actual": 289600.0,
+      "predicted": 349882.0
+    },
+    {
+      "actual": 100000.0,
+      "predicted": 111144.0
+    },
+    {
+      "actual": 181500.0,
+      "predicted": 252484.0
+    },
+    {
+      "actual": 259800.0,
+      "predicted": 283553.0
+    },
+    {
+      "actual": 165300.0,
+      "predicted": 194224.0
+    },
+    {
+      "actual": 48100.0,
+      "predicted": 53039.0
+    },
+    {
+      "actual": 68400.0,
+      "predicted": 97535.0
+    },
+    {
+      "actual": 346100.0,
+      "predicted": 307677.0
+    },
+    {
+      "actual": 500001.0,
+      "predicted": 287555.0
+    },
+    {
+      "actual": 362500.0,
+      "predicted": 193762.0
+    },
+    {
+      "actual": 359900.0,
+      "predicted": 335803.0
+    },
+    {
+      "actual": 158800.0,
+      "predicted": 158672.0
+    },
+    {
+      "actual": 96700.0,
+      "predicted": 94866.0
+    },
+    {
+      "actual": 318700.0,
+      "predicted": 378320.0
+    },
+    {
+      "actual": 346700.0,
+      "predicted": 302273.0
+    },
+    {
+      "actual": 181700.0,
+      "predicted": 182931.0
+    },
+    {
+      "actual": 293200.0,
+      "predicted": 319655.0
+    },
+    {
+      "actual": 92300.0,
+      "predicted": 93910.0
+    },
+    {
+      "actual": 87700.0,
+      "predicted": 92415.0
+    },
+    {
+      "actual": 275000.0,
+      "predicted": 212465.0
+    },
+    {
+      "actual": 277800.0,
+      "predicted": 209877.0
+    },
+    {
+      "actual": 261300.0,
+      "predicted": 315461.0
+    },
+    {
+      "actual": 174100.0,
+      "predicted": 198481.0
+    },
+    {
+      "actual": 126900.0,
+      "predicted": 119225.0
+    },
+    {
+      "actual": 137500.0,
+      "predicted": 121369.0
+    },
+    {
+      "actual": 117200.0,
+      "predicted": 109648.0
+    },
+    {
+      "actual": 131100.0,
+      "predicted": 100708.0
+    },
+    {
+      "actual": 87000.0,
+      "predicted": 91613.0
+    },
+    {
+      "actual": 60000.0,
+      "predicted": 156594.0
+    },
+    {
+      "actual": 229200.0,
+      "predicted": 218676.0
+    },
+    {
+      "actual": 212200.0,
+      "predicted": 245166.0
+    },
+    {
+      "actual": 340700.0,
+      "predicted": 262827.0
+    },
+    {
+      "actual": 57500.0,
+      "predicted": 51888.0
+    },
+    {
+      "actual": 203400.0,
+      "predicted": 217668.0
+    },
+    {
+      "actual": 191500.0,
+      "predicted": 185280.0
+    },
+    {
+      "actual": 309100.0,
+      "predicted": 325466.0
+    },
+    {
+      "actual": 137000.0,
+      "predicted": 160063.0
+    },
+    {
+      "actual": 96300.0,
+      "predicted": 119367.0
+    },
+    {
+      "actual": 130300.0,
+      "predicted": 128082.0
+    },
+    {
+      "actual": 110700.0,
+      "predicted": 126296.0
+    },
+    {
+      "actual": 215200.0,
+      "predicted": 240870.0
+    },
+    {
+      "actual": 345800.0,
+      "predicted": 380244.0
+    },
+    {
+      "actual": 152500.0,
+      "predicted": 190988.0
+    },
+    {
+      "actual": 195100.0,
+      "predicted": 195561.0
+    },
+    {
+      "actual": 217500.0,
+      "predicted": 197277.0
+    },
+    {
+      "actual": 174300.0,
+      "predicted": 252869.0
+    },
+    {
+      "actual": 149000.0,
+      "predicted": 100444.0
+    },
+    {
+      "actual": 161500.0,
+      "predicted": 174748.0
+    },
+    {
+      "actual": 112500.0,
+      "predicted": 127949.0
+    },
+    {
+      "actual": 349600.0,
+      "predicted": 344720.0
+    },
+    {
+      "actual": 87800.0,
+      "predicted": 124267.0
+    },
+    {
+      "actual": 123700.0,
+      "predicted": 116215.0
+    },
+    {
+      "actual": 94400.0,
+      "predicted": 100487.0
+    },
+    {
+      "actual": 208900.0,
+      "predicted": 185076.0
+    },
+    {
+      "actual": 169400.0,
+      "predicted": 161344.0
+    },
+    {
+      "actual": 101600.0,
+      "predicted": 128542.0
+    },
+    {
+      "actual": 61400.0,
+      "predicted": 63025.0
+    },
+    {
+      "actual": 208700.0,
+      "predicted": 197863.0
+    },
+    {
+      "actual": 165300.0,
+      "predicted": 117100.0
+    },
+    {
+      "actual": 96700.0,
+      "predicted": 88485.0
+    },
+    {
+      "actual": 330300.0,
+      "predicted": 363486.0
+    },
+    {
+      "actual": 122500.0,
+      "predicted": 200064.0
+    },
+    {
+      "actual": 189800.0,
+      "predicted": 281842.0
+    },
+    {
+      "actual": 48100.0,
+      "predicted": 62295.0
+    },
+    {
+      "actual": 410000.0,
+      "predicted": 372181.0
+    },
+    {
+      "actual": 83200.0,
+      "predicted": 128109.0
+    },
+    {
+      "actual": 134600.0,
+      "predicted": 200995.0
+    },
+    {
+      "actual": 200500.0,
+      "predicted": 201756.0
+    },
+    {
+      "actual": 363800.0,
+      "predicted": 369102.0
+    },
+    {
+      "actual": 150200.0,
+      "predicted": 142296.0
+    },
+    {
+      "actual": 257500.0,
+      "predicted": 249619.0
+    },
+    {
+      "actual": 252400.0,
+      "predicted": 269048.0
+    },
+    {
+      "actual": 416700.0,
+      "predicted": 481418.0
+    },
+    {
+      "actual": 139000.0,
+      "predicted": 169051.0
+    },
+    {
+      "actual": 292000.0,
+      "predicted": 330745.0
+    },
+    {
+      "actual": 284100.0,
+      "predicted": 300516.0
+    },
+    {
+      "actual": 113900.0,
+      "predicted": 144854.0
+    },
+    {
+      "actual": 214800.0,
+      "predicted": 204694.0
+    },
+    {
+      "actual": 58800.0,
+      "predicted": 76464.0
+    },
+    {
+      "actual": 256000.0,
+      "predicted": 320191.0
+    },
+    {
+      "actual": 166500.0,
+      "predicted": 155477.0
+    },
+    {
+      "actual": 153300.0,
+      "predicted": 171503.0
+    },
+    {
+      "actual": 174400.0,
+      "predicted": 149622.0
+    },
+    {
+      "actual": 153300.0,
+      "predicted": 188448.0
+    },
+    {
+      "actual": 103600.0,
+      "predicted": 128607.0
+    },
+    {
+      "actual": 269000.0,
+      "predicted": 387331.0
+    },
+    {
+      "actual": 165200.0,
+      "predicted": 180245.0
+    },
+    {
+      "actual": 417600.0,
+      "predicted": 215928.0
+    },
+    {
+      "actual": 400000.0,
+      "predicted": 267537.0
+    },
+    {
+      "actual": 76000.0,
+      "predicted": 66075.0
+    },
+    {
+      "actual": 64600.0,
+      "predicted": 53751.0
+    },
+    {
+      "actual": 264900.0,
+      "predicted": 214156.0
+    },
+    {
+      "actual": 43300.0,
+      "predicted": 60832.0
+    },
+    {
+      "actual": 137000.0,
+      "predicted": 120323.0
+    },
+    {
+      "actual": 247800.0,
+      "predicted": 175179.0
+    },
+    {
+      "actual": 146200.0,
+      "predicted": 131943.0
+    },
+    {
+      "actual": 98400.0,
+      "predicted": 90975.0
+    },
+    {
+      "actual": 288100.0,
+      "predicted": 290263.0
+    },
+    {
+      "actual": 362300.0,
+      "predicted": 354687.0
+    },
+    {
+      "actual": 286700.0,
+      "predicted": 270995.0
+    },
+    {
+      "actual": 160700.0,
+      "predicted": 154760.0
+    },
+    {
+      "actual": 217100.0,
+      "predicted": 256777.0
+    },
+    {
+      "actual": 253500.0,
+      "predicted": 257315.0
+    },
+    {
+      "actual": 240000.0,
+      "predicted": 276054.0
+    },
+    {
+      "actual": 141200.0,
+      "predicted": 136209.0
+    },
+    {
+      "actual": 500001.0,
+      "predicted": 439330.0
+    },
+    {
+      "actual": 204700.0,
+      "predicted": 177100.0
+    },
+    {
+      "actual": 236000.0,
+      "predicted": 233109.0
+    },
+    {
+      "actual": 192200.0,
+      "predicted": 233065.0
+    },
+    {
+      "actual": 220000.0,
+      "predicted": 244043.0
+    },
+    {
+      "actual": 500000.0,
+      "predicted": 232226.0
+    },
+    {
+      "actual": 66600.0,
+      "predicted": 77726.0
+    },
+    {
+      "actual": 121100.0,
+      "predicted": 141483.0
+    },
+    {
+      "actual": 81600.0,
+      "predicted": 93112.0
+    },
+    {
+      "actual": 127800.0,
+      "predicted": 144044.0
+    },
+    {
+      "actual": 320100.0,
+      "predicted": 351785.0
+    },
+    {
+      "actual": 119500.0,
+      "predicted": 122015.0
+    },
+    {
+      "actual": 98000.0,
+      "predicted": 115170.0
+    },
+    {
+      "actual": 247900.0,
+      "predicted": 252415.0
+    },
+    {
+      "actual": 129200.0,
+      "predicted": 175399.0
+    },
+    {
+      "actual": 289500.0,
+      "predicted": 288332.0
+    },
+    {
+      "actual": 90300.0,
+      "predicted": 104972.0
+    },
+    {
+      "actual": 267600.0,
+      "predicted": 292099.0
+    },
+    {
+      "actual": 241500.0,
+      "predicted": 223142.0
+    },
+    {
+      "actual": 140100.0,
+      "predicted": 121100.0
+    },
+    {
+      "actual": 123200.0,
+      "predicted": 120152.0
+    },
+    {
+      "actual": 144600.0,
+      "predicted": 156064.0
+    },
+    {
+      "actual": 112500.0,
+      "predicted": 71758.0
+    },
+    {
+      "actual": 72500.0,
+      "predicted": 65896.0
+    },
+    {
+      "actual": 187500.0,
+      "predicted": 141957.0
+    },
+    {
+      "actual": 80400.0,
+      "predicted": 86132.0
+    },
+    {
+      "actual": 100000.0,
+      "predicted": 88404.0
+    },
+    {
+      "actual": 347700.0,
+      "predicted": 229025.0
+    },
+    {
+      "actual": 143400.0,
+      "predicted": 137833.0
+    },
+    {
+      "actual": 200000.0,
+      "predicted": 239048.0
+    },
+    {
+      "actual": 340500.0,
+      "predicted": 356835.0
+    },
+    {
+      "actual": 347700.0,
+      "predicted": 369963.0
+    },
+    {
+      "actual": 500001.0,
+      "predicted": 500001.0
+    },
+    {
+      "actual": 61000.0,
+      "predicted": 61898.0
+    },
+    {
+      "actual": 354700.0,
+      "predicted": 378374.0
+    },
+    {
+      "actual": 115000.0,
+      "predicted": 162146.0
+    },
+    {
+      "actual": 236100.0,
+      "predicted": 270616.0
+    },
+    {
+      "actual": 179200.0,
+      "predicted": 241985.0
+    },
+    {
+      "actual": 133000.0,
+      "predicted": 114726.0
+    },
+    {
+      "actual": 83600.0,
+      "predicted": 91402.0
+    },
+    {
+      "actual": 130000.0,
+      "predicted": 138712.0
+    },
+    {
+      "actual": 225000.0,
+      "predicted": 235564.0
+    },
+    {
+      "actual": 233300.0,
+      "predicted": 330628.0
+    },
+    {
+      "actual": 180000.0,
+      "predicted": 183750.0
+    }
+  ],
+  "residual_bins": [
+    {
+      "range": "-272k to -241k",
+      "count": 1
+    },
+    {
+      "range": "-241k to -210k",
+      "count": 1
+    },
+    {
+      "range": "-210k to -179k",
+      "count": 4
+    },
+    {
+      "range": "-179k to -147k",
+      "count": 11
+    },
+    {
+      "range": "-147k to -116k",
+      "count": 23
+    },
+    {
+      "range": "-116k to -85k",
+      "count": 63
+    },
+    {
+      "range": "-85k to -54k",
+      "count": 191
+    },
+    {
+      "range": "-54k to -22k",
+      "count": 742
+    },
+    {
+      "range": "-22k to 8k",
+      "count": 1733
+    },
+    {
+      "range": "8k to 39k",
+      "count": 718
+    },
+    {
+      "range": "39k to 70k",
+      "count": 299
+    },
+    {
+      "range": "70k to 102k",
+      "count": 132
+    },
+    {
+      "range": "102k to 133k",
+      "count": 72
+    },
+    {
+      "range": "133k to 164k",
+      "count": 42
+    },
+    {
+      "range": "164k to 196k",
+      "count": 29
+    },
+    {
+      "range": "196k to 227k",
+      "count": 10
+    },
+    {
+      "range": "227k to 258k",
+      "count": 6
+    },
+    {
+      "range": "258k to 289k",
+      "count": 7
+    },
+    {
+      "range": "289k to 321k",
+      "count": 2
+    },
+    {
+      "range": "321k to 352k",
+      "count": 1
+    }
+  ],
+  "region_breakdown": [
+    {
+      "region": "ISLAND",
+      "avg_value": 380440.0,
+      "count": 5
+    },
+    {
+      "region": "NEAR BAY",
+      "avg_value": 259279.0,
+      "count": 2270
+    },
+    {
+      "region": "NEAR OCEAN",
+      "avg_value": 249042.0,
+      "count": 2628
+    },
+    {
+      "region": "<1H OCEAN",
+      "avg_value": 240268.0,
+      "count": 9034
+    },
+    {
+      "region": "INLAND",
+      "avg_value": 124897.0,
+      "count": 6496
+    }
+  ]
+}
