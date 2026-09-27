@@ -53,4 +53,4 @@ python -m http.server 8000  # serve locally (fetch() needs http, not file://)
 ## Live demo
 
 Enable GitHub Pages (Settings → Pages → deploy from `main`, root):
-`https://<your-username>.github.io/california-housing-dashboard/`
+`https://deepanshusodhi99-cell.github.io/california-housing-dashboard/`
